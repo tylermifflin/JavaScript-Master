@@ -9,6 +9,10 @@ var question4El = document.getElementById("question4");
 var answersEl = document.getElementById("answers");
 var resultsEl = document.getElementById("results");
 
+var time;
+var timecount;
+var results = "0, 25%, 50%, 75%, 100%";
+
 startquizbuttonEl.addEventListener("click", startQuiz);
 //how to start the quiz and the timer once the start button is clicked?
 function startQuiz() {
