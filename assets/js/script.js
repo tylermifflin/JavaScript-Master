@@ -11,10 +11,10 @@ var resultsEl = document.getElementById("results");
 
 var timer = "";
 var results = "0, 25%, 50%, 75%, 100%";
-var answer question 1 = Boolean;
-var answer question 2 = Or; 
-var answer question 3 = Equal;
-var answer question 4 = ++;
+var answerquestion1 = "Boolean";
+var answerquestion2 = "Or"; 
+var answerquestion3 = "Equal";
+var answerquestion4 = "++"";
 
 
 startquizbuttonEl.addEventListener("click", startQuizTimer);
@@ -33,7 +33,13 @@ function startQuizTimer() {
       question2El.classList.remove("hide");
       timeEl.textContent = time;
       time--;
-    } else 
+    } 
+    if (answerquestion1 +== Boolean) {
+      time.El.textContent = 45;
+      time--;
+    } else {time.El.textContent = time;
+      time--;
+    } 
 
 
 
