@@ -50,6 +50,35 @@ function startQuizTimer() {
       time.El.textContent = 30;
       time--;
     }
+    if (question3El.classList.remove("hide")=== clicked) {
+      question3El.classList.add("hide");
+      question4El.classList.remove("hide");
+      timeEl.textContent = time;
+      time--;
+    }
+    if (answerquestion3 +== Equal) {
+      time.El.textContent = 15;
+      time--;
+    }
+    if (question4El.classList.remove("hide")=== clicked) {
+      question4El.classList.add("hide");
+      resultsEl.classList.remove("hide");
+      timeEl.textContent = time;
+      time--;
+    }
+    if (answerquestion4 +== ++) {
+      time.El.textContent = 0;
+      time--;
+    }
+    if (time === 0 || question4El.classList.remove("hide")=== clicked) {
+      clearInterval(timer);
+      timeEl.textContent = "0";
+      resultsEl.textContent = "You got " + results;
+      question1El.classList.add("hide");
+      question2El.classList.add("hide");
+      question3El.classList.add("hide");
+      question4El.classList.add("hide");
+    }
 
 
 
