@@ -9,15 +9,20 @@ var question4El = document.getElementById("question4");
 var answersEl = document.getElementById("answers");
 var resultsEl = document.getElementById("results");
 
-var time;
-var timecount;
+var timer = "";
 var results = "0, 25%, 50%, 75%, 100%";
 
 
-startquizbuttonEl.addEventListener("click", startQuiz);
-function startQuiz() {
+startquizbuttonEl.addEventListener("click", startQuizTimer);
+function startQuizTimer() {
+  timer = setInterval(function () {
+    if startquizbuttonEl = clicked {
+      timeEl.textContent = 60;
+
+
+
   startquizbuttonEl.classList.add("hide");
   jsmasterEl.classList.add("hide");
   question1El.classList.remove("hide");
-  setTime();
+  
 }
