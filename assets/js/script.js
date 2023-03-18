@@ -79,6 +79,19 @@ function startQuizTimer() {
       question3El.classList.add("hide");
       question4El.classList.add("hide");
     }
+    if (answerquestion1 === Boolean && answerquestion2 === Or && answerquestion3 === Equal && answerquestion4 === ++) {
+      resultsEl.textContent = "You got " + results[4] + "!";
+    } else if (answerquestion1 === Boolean && answerquestion2 === Or && answerquestion3 === Equal) {
+      resultsEl.textContent = "You got " + results[3] + "!";
+    } else if (answerquestion1 === Boolean && answerquestion2 === Or) {
+      resultsEl.textContent = "You got " + results[2] + "!";
+    } else if (answerquestion1 === Boolean) {
+      resultsEl.textContent = "You got " + results[1] + "!";
+    } else {
+      resultsEl.textContent = "You got " + results[0] + "!";
+    }
+  }, 1000);
+
 
 
 
