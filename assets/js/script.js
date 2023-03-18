@@ -40,6 +40,16 @@ function startQuizTimer() {
     } else {time.El.textContent = time;
       time--;
     } 
+    if (question2El.classList.remove("hide")=== clicked) {
+      question2El.classList.add("hide");
+      question3El.classList.remove("hide");
+      timeEl.textContent = time;
+      time--;
+    }  
+    if (answerquestion2 +== Or) {
+      time.El.textContent = 30;
+      time--;
+    }
 
 
 
