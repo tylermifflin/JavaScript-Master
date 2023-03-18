@@ -14,7 +14,7 @@ var results = "0, 25%, 50%, 75%, 100%";
 var answerquestion1 = "Boolean";
 var answerquestion2 = "Or"; 
 var answerquestion3 = "Equal";
-var answerquestion4 = "++"";
+var answerquestion4 = "++";
 
 
 startquizbuttonEl.addEventListener("click", startQuizTimer);
@@ -34,7 +34,7 @@ function startQuizTimer() {
       timeEl.textContent = time;
       time--;
     } 
-    if (answerquestion1 +== Boolean) {
+    if (answerquestion1 !== answerquestion1) {
       time.El.textContent = 45;
       time--;
     } else {time.El.textContent = time;
@@ -46,7 +46,7 @@ function startQuizTimer() {
       timeEl.textContent = time;
       time--;
     }  
-    if (answerquestion2 +== Or) {
+    if (answerquestion2 !== answerquestion2) {
       time.El.textContent = 30;
       time--;
     }
@@ -56,7 +56,7 @@ function startQuizTimer() {
       timeEl.textContent = time;
       time--;
     }
-    if (answerquestion3 +== Equal) {
+    if (answerquestion3 !== answerquestion3) {
       time.El.textContent = 15;
       time--;
     }
@@ -66,7 +66,7 @@ function startQuizTimer() {
       timeEl.textContent = time;
       time--;
     }
-    if (answerquestion4 +== ++) {
+    if (answerquestion4 !== answerquestion4) {
       time.El.textContent = 0;
       time--;
     }
@@ -90,10 +90,6 @@ function startQuizTimer() {
     } else {
       resultsEl.textContent = "You got " + results[0] + "!";
     }
-  }, 1000);
-
-
-
-
-  
+  }, 1000);  
 }
+
