@@ -6,7 +6,6 @@ var question1El = document.getElementById("question1");
 var question2El = document.getElementById("question2");
 var question3El = document.getElementById("question3");
 var question4El = document.getElementById("question4");
-var answersEl = document.getElementById("answers");
 var resultsEl = document.getElementById("results");
 
 var timer = "";
@@ -28,6 +27,8 @@ function startQuizTimer() {
     jsmasterEl.classList.add("hide");
     question1El.classList.remove("hide");
     }
+    question1El.addEventListener("click", function(question1) 
+
     if (question1El.classList.remove("hide")=== clicked) {
       question1El.classList.add("hide");
       question2El.classList.remove("hide");
@@ -40,6 +41,7 @@ function startQuizTimer() {
     } else {time.El.textContent = time;
       time--;
     } 
+    question2El.addEventListener("click", function(event) {
     if (question2El.classList.remove("hide")=== clicked) {
       question2El.classList.add("hide");
       question3El.classList.remove("hide");
@@ -50,6 +52,7 @@ function startQuizTimer() {
       time.El.textContent = 30;
       time--;
     }
+    question3El.addEventListener("click", function(event) {
     if (question3El.classList.remove("hide")=== clicked) {
       question3El.classList.add("hide");
       question4El.classList.remove("hide");
@@ -60,6 +63,7 @@ function startQuizTimer() {
       time.El.textContent = 15;
       time--;
     }
+    question4El.addEventListener("click", function(event) {
     if (question4El.classList.remove("hide")=== clicked) {
       question4El.classList.add("hide");
       resultsEl.classList.remove("hide");
@@ -91,5 +95,3 @@ function startQuizTimer() {
       resultsEl.textContent = "You got " + results[0] + "!";
     }
   }, 1000);  
-}
-
