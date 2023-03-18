@@ -11,10 +11,10 @@ var resultsEl = document.getElementById("results");
 
 var timer = "";
 var results = "0, 25%, 50%, 75%, 100%";
-var answerquestion1 = "Boolean";
-var answerquestion2 = "Or"; 
-var answerquestion3 = "Equal";
-var answerquestion4 = "++";
+var answerquestion1 = "boolean";
+var answerquestion2 = "or"; 
+var answerquestion3 = "equal";
+var answerquestion4 = "and";
 
 
 startquizbuttonEl.addEventListener("click", startQuizTimer);
@@ -34,7 +34,7 @@ function startQuizTimer() {
       timeEl.textContent = time;
       time--;
     } 
-    if (answerquestion1 !== answerquestion1) {
+    if (clicked !== answerquestion1) {
       time.El.textContent = 45;
       time--;
     } else {time.El.textContent = time;
@@ -46,7 +46,7 @@ function startQuizTimer() {
       timeEl.textContent = time;
       time--;
     }  
-    if (answerquestion2 !== answerquestion2) {
+    if (clicked !== answerquestion2) {
       time.El.textContent = 30;
       time--;
     }
@@ -56,7 +56,7 @@ function startQuizTimer() {
       timeEl.textContent = time;
       time--;
     }
-    if (answerquestion3 !== answerquestion3) {
+    if (clicked !== answerquestion3) {
       time.El.textContent = 15;
       time--;
     }
@@ -79,9 +79,9 @@ function startQuizTimer() {
       question3El.classList.add("hide");
       question4El.classList.add("hide");
     }
-    if (answerquestion1 === Boolean && answerquestion2 === Or && answerquestion3 === Equal && answerquestion4 === ++) {
+    if (answerquestion1 === "Boolean" && answerquestion2 === "Or" && answerquestion3 === "Equal" && answerquestion4 === "++") {
       resultsEl.textContent = "You got " + results[4] + "!";
-    } else if (answerquestion1 === Boolean && answerquestion2 === Or && answerquestion3 === Equal) {
+    } else if (answerquestion1 === "Boolean" && answerquestion2 === Or && answerquestion3 === Equal) {
       resultsEl.textContent = "You got " + results[3] + "!";
     } else if (answerquestion1 === Boolean && answerquestion2 === Or) {
       resultsEl.textContent = "You got " + results[2] + "!";
