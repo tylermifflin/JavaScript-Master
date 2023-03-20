@@ -37,17 +37,17 @@ function startQuizTimer() {
     } else {time.El.textContent = 45;
       time--;
     } 
+  });
     question2El.addEventListener("click", function(event) {
-    if (question2El.classList.remove("hide")=== clicked) {
+    if (event.target.textContent === answerquestion2) {
       question2El.classList.add("hide");
       question3El.classList.remove("hide");
       timeEl.textContent = time;
       time--;
-    }  
-    if (clicked !== answerquestion2) {
-      time.El.textContent = 30;
+    }  else {time.El.textContent = 30;
       time--;
     }
+  });
     question3El.addEventListener("click", function(event) {
     if (question3El.classList.remove("hide")=== clicked) {
       question3El.classList.add("hide");
