@@ -21,7 +21,6 @@ startquizbuttonEl.addEventListener("click", startQuizTimer);
 function startQuizTimer() {
   var time = 60;
   timer = setInterval(function () {
-    if (startquizbuttonEl === clicked) {
       timeEl.textContent = time;
       time--;
      startquizbuttonEl.classList.add("hide");
@@ -33,8 +32,6 @@ function startQuizTimer() {
     if (event.target.textContent === answerquestion1) {
       question1El.classList.add("hide");
       question2El.classList.remove("hide");
-      timeEl.textContent = time;
-      time--;
     } else {time.El.textContent = 45;
       time--;
     } 
