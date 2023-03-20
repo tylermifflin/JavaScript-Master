@@ -1,22 +1,23 @@
-var startquizbuttonEl = document.getElementById("startquizbutton");
-var timeEl = document.getElementById("time");
-var highscoreEl = document.getElementById("highscore");
-var jsmasterEl = document.getElementById("jsmaster");
-var question1El = document.getElementById("question1");
-var question2El = document.getElementById("question2");
-var question3El = document.getElementById("question3");
-var question4El = document.getElementById("question4");
-var resultsEl = document.getElementById("results");
+var startquizbuttonEl = document.getElementById('startquizbutton');
+var timeEl = document.getElementById('time');
+var highscoreEl = document.getElementById('highscore');
+var jsmasterEl = document.getElementById('jsmaster');
+var question1El = document.getElementById('question1');
+var question2El = document.getElementById('question2');
+var question3El = document.getElementById('question3');
+var question4El = document.getElementById('question4');
+var resultsEl = document.getElementById('results');
 
 var timer = "";
-var results = "0, 25%, 50%, 75%, 100%";
+var results = [0, 25, 50, 75, 100];
 var answerquestion1 = "boolean";
 var answerquestion2 = "or"; 
 var answerquestion3 = "equal";
 var answerquestion4 = "and";
 
 
-startquizbuttonEl.addEventListener("click", startQuizTimer);
+startquizbuttonEl.addEventListener("click", startQuizTimer); 
+ 
 function startQuizTimer() {
   var time = 60;
   timer = setInterval(function () {
@@ -26,7 +27,7 @@ function startQuizTimer() {
      startquizbuttonEl.classList.add("hide");
     jsmasterEl.classList.add("hide");
     question1El.classList.remove("hide");
-    }
+    
     question1El.addEventListener("click", function(event) {
 
     if (event.target.textContent === answerquestion1) {
