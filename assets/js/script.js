@@ -1,4 +1,4 @@
-var startquizbuttonEl = document.getElementById('startquizbutton');
+var startquizbuttonEl = document.querySelector('#startquizbutton');
 var timeEl = document.getElementById('time');
 var highscoreEl = document.getElementById('highscore');
 var jsmasterEl = document.getElementById('jsmaster');
@@ -8,17 +8,21 @@ var question3El = document.getElementById('question3');
 var question4El = document.getElementById('question4');
 var resultsEl = document.getElementById('results');
 
-var results = [0, 25, 50, 75, 100];
-var answerquestion1 = "boolean";
-var answerquestion2 = "or"; 
-var answerquestion3 = "equal";
-var answerquestion4 = "and";
 
 
-startquizbuttonEl.addEventListener("click", startquizbutton); 
+
+startquizbuttonEl.addEventListener("click", function(event) {
+  event.preventDefault();
+  startquizbutton();
+}); 
  
 function startquizbutton() {
   var time = 60;
+  var results = [0, 25, 50, 75, 100];
+  var answerquestion1 = "boolean";
+  var answerquestion2 = "or"; 
+  var answerquestion3 = "equal";
+  var answerquestion4 = "and";
   timer = setInterval(function () {
       timeEl.textContent = time;
       time--;
@@ -29,7 +33,7 @@ function startquizbutton() {
       clearInterval(timer);
   }, 1000);
 }
-    
+
     question1El.addEventListener("click", function(event) {
 
     if (event.target.textContent === question1El.children[2]) {
