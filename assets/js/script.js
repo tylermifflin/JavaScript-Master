@@ -29,15 +29,17 @@ function startquizbutton() {
     
     question1El.addEventListener("click", function(event) {
 
-    if (event.target.textContent === question1El) {
+    if (event.target.textContent === question1El.children[2]) {
       question1El.classList.add("hide");
       question2El.classList.remove("hide");
     } else {timeEl.textContent = 45;
       time--;
+      question1El.classList.add("hide");
+      question2El.classList.remove("hide");
     } 
   });
     question2El.addEventListener("click", function(event) {
-    if (event.target.textContent === question2El) {
+    if (event.target.textContent === question2El.children[1]) {
       question2El.classList.add("hide");
       question3El.classList.remove("hide");
     }  else {timeEl.textContent = 30;
@@ -45,7 +47,7 @@ function startquizbutton() {
     }
   });
     question3El.addEventListener("click", function(event) {
-    if (event.target.textContent === question3El) {
+    if (event.target.textContent === question3El.children[4]) {
       question3El.classList.add("hide");
       question4El.classList.remove("hide");
     } else {timeEl.textContent = 15;
@@ -53,7 +55,7 @@ function startquizbutton() {
     }
   });
     question4El.addEventListener("click", function(event) {
-    if (event.target.textContent === question4El) {
+    if (event.target.textContent === question4El.children{2}) {
       question4El.classList.add("hide");
       resultsEl.classList.remove("hide");
     } else {timeEl.textContent = 0;
