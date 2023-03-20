@@ -32,7 +32,7 @@ function startQuizTimer() {
     if (event.target.textContent === answerquestion1) {
       question1El.classList.add("hide");
       question2El.classList.remove("hide");
-    } else {time.El.textContent = 45;
+    } else {timeEl.textContent = 45;
       time--;
     } 
   });
@@ -40,9 +40,7 @@ function startQuizTimer() {
     if (event.target.textContent === answerquestion2) {
       question2El.classList.add("hide");
       question3El.classList.remove("hide");
-      timeEl.textContent = time;
-      time--;
-    }  else {time.El.textContent = 30;
+    }  else {timeEl.textContent = 30;
       time--;
     }
   });
@@ -50,18 +48,14 @@ function startQuizTimer() {
     if (event.target.textContent === answerquestion3) {
       question3El.classList.add("hide");
       question4El.classList.remove("hide");
-      timeEl.textContent = time;
-      time--;
-    } else {time.El.textContent = 15;
+    } else {timeEl.textContent = 15;
     }
   });
     question4El.addEventListener("click", function(event) {
     if (event.target.textContent === answerquestion4) {
       question4El.classList.add("hide");
       resultsEl.classList.remove("hide");
-      timeEl.textContent = time;
-      time--;
-    } else {time.El.textContent = 0;
+    } else {timeEl.textContent = 0;
     }
   
     if (time === 0 || question4El.classList.contains("hide")) {
