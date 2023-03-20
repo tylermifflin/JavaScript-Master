@@ -40,7 +40,7 @@ function startquizbutton() {
       question1El.classList.add("hide");
       question2El.classList.remove("hide");
     } 
-  }
+  });
     question2El.addEventListener("click", function(event) {
     if (event.target.textContent === question2El.children[1]) {
       question2El.classList.add("hide");
@@ -50,7 +50,7 @@ function startquizbutton() {
       question2El.classList.add("hide");
       question3El.classList.remove("hide");
     }
-  }
+  });
     question3El.addEventListener("click", function(event) {
     if (event.target.textContent === question3El.children[4]) {
       question3El.classList.add("hide");
@@ -60,7 +60,7 @@ function startquizbutton() {
       question3El.classList.add("hide");
       question4El.classList.remove("hide");
     }
-  }
+  });
     question4El.addEventListener("click", function(event) {
     if (event.target.textContent === question4El.children[2]) {
       question4El.classList.add("hide");
