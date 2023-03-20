@@ -49,16 +49,14 @@ function startQuizTimer() {
     }
   });
     question3El.addEventListener("click", function(event) {
-    if (question3El.classList.remove("hide")=== clicked) {
+    if (event.target.textContent === answerquestion3) {
       question3El.classList.add("hide");
       question4El.classList.remove("hide");
       timeEl.textContent = time;
       time--;
+    } else {time.El.textContent = 15;
     }
-    if (clicked !== answerquestion3) {
-      time.El.textContent = 15;
-      time--;
-    }
+  });
     question4El.addEventListener("click", function(event) {
     if (question4El.classList.remove("hide")=== clicked) {
       question4El.classList.add("hide");
