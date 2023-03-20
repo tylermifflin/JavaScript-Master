@@ -58,17 +58,15 @@ function startQuizTimer() {
     }
   });
     question4El.addEventListener("click", function(event) {
-    if (question4El.classList.remove("hide")=== clicked) {
+    if (event.target.textContent === answerquestion4) {
       question4El.classList.add("hide");
       resultsEl.classList.remove("hide");
       timeEl.textContent = time;
       time--;
+    } else {time.El.textContent = 0;
     }
-    if (answerquestion4 !== answerquestion4) {
-      time.El.textContent = 0;
-      time--;
-    }
-    if (time === 0 || question4El.classList.remove("hide")=== clicked) {
+  
+    if (time === 0 || question4El.classList.contains("hide")) {
       clearInterval(timer);
       timeEl.textContent = "0";
       resultsEl.textContent = "You got " + results;
@@ -77,15 +75,17 @@ function startQuizTimer() {
       question3El.classList.add("hide");
       question4El.classList.add("hide");
     }
-    if (answerquestion1 === "Boolean" && answerquestion2 === "Or" && answerquestion3 === "Equal" && answerquestion4 === "++") {
+    if (answerquestion1 === "boolean" && answerquestion2 === "0r" && answerquestion3 === "equal" && answerquestion4 === "++") {
       resultsEl.textContent = "You got " + results[4] + "!";
-    } else if (answerquestion1 === "Boolean" && answerquestion2 === Or && answerquestion3 === Equal) {
+    } else if (answerquestion1 === "boolean" && answerquestion2 === "or" && answerquestion3 === "equal") {
       resultsEl.textContent = "You got " + results[3] + "!";
-    } else if (answerquestion1 === Boolean && answerquestion2 === Or) {
+    } else if (answerquestion1 === "boolean" && answerquestion2 === "or") {
       resultsEl.textContent = "You got " + results[2] + "!";
-    } else if (answerquestion1 === Boolean) {
+    } else if (answerquestion1 === "boolean") {
       resultsEl.textContent = "You got " + results[1] + "!";
     } else {
       resultsEl.textContent = "You got " + results[0] + "!";
     }
   }, 1000);  
+});
+} 
