@@ -44,6 +44,8 @@ function startquizbutton() {
       question3El.classList.remove("hide");
     }  else {timeEl.textContent = 30;
       time--;
+      question2El.classList.add("hide");
+      question3El.classList.remove("hide");
     }
   });
     question3El.addEventListener("click", function(event) {
@@ -52,6 +54,8 @@ function startquizbutton() {
       question4El.classList.remove("hide");
     } else {timeEl.textContent = 15;
       time--;
+      question3El.classList.add("hide");
+      question4El.classList.remove("hide");
     }
   });
     question4El.addEventListener("click", function(event) {
