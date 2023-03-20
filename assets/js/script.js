@@ -19,7 +19,7 @@ var answerquestion4 = "and";
 startquizbuttonEl.addEventListener("click", startQuizTimer);
 function startQuizTimer() {
   var time = 60;
-  timer = setInterval(function () {
+  timer = setInterval(function () ){
     if (startquizbuttonEl === clicked) {
       timeEl.textContent = time;
       time--;
@@ -27,7 +27,7 @@ function startQuizTimer() {
     jsmasterEl.classList.add("hide");
     question1El.classList.remove("hide");
     }
-    question1El.addEventListener("click", function(question1) 
+    question1El.addEventListener("click", function(event) {
 
     if (question1El.classList.remove("hide")=== clicked) {
       question1El.classList.add("hide");
@@ -36,7 +36,7 @@ function startQuizTimer() {
       time--;
     } 
     if (clicked !== answerquestion1) {
-      time.El.textContent = 45;
+      timeEl.textContent = 45;
       time--;
     } else {time.El.textContent = time;
       time--;
