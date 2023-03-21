@@ -56,25 +56,31 @@ function startquizbutton() {
       question2El.setAttribute("style", "display: none");
       question3El.setAttribute("style", "display: block");
     }  else if (event.target !==question2El.children[1]) {
+      alert("wrong")
       question2El.setAttribute("style", "display: none");
       question3El.setAttribute("style", "display: block");
     }
   });
     question3El.addEventListener("click", function(event) {
     if (event.target === question3El.children[4]) {
+      alert("correct")
       question3El.setAttribute("style", "display: none");
       question4El.setAttribute("style", "display: block");
     } else if (event.target !==question3El.children[4]) {
+      alert("wrong")
       question3El.setAttribute("style", "display: none");
       question4El.setAttribute("style", "display: block");
     }
   });
     question4El.addEventListener("click", function(event) {
     if (event.target.textContent === question4El.children[2]) {
+      alert("correct")
       question4El.classList.add(".hide");
       resultsEl.classList.remove(".hide");
-    } else {timeEl.textContent = 0;
-      timeEl.textContent--;
+    } else if (event.target.textContent !==question4El.children[2]) {
+      alert("wrong")
+      question4El.classList.add(".hide");
+      resultsEl.classList.remove(".hide");
     }
   
     if (timeEl.textContent = 0 || question4El.classList.contains(".hide")) {
