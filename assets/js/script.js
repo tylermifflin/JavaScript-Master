@@ -31,6 +31,8 @@ function startquizbutton() {
   var timerInterval = setInterval(function() {
     time--;
     timeEl.textContent = time;
+    if (time === 0 || resultsEl.setAttribute("style", "display: block")) {
+      clearInterval(timerInterval); }
   }, 1000);
 }
 
@@ -73,29 +75,40 @@ function startquizbutton() {
     }
   });
     question4El.addEventListener("click", function(event) {
-    if (event.target.textContent === question4El.children[2]) {
+    if (event.target === question4El.children[2]) {
       alert("correct")
-      question4El.classList.add(".hide");
-      resultsEl.classList.remove(".hide");
-    } else if (event.target.textContent !==question4El.children[2]) {
+      question4El.setAttribute("style", "display: none");
+      resultsEl.setAttribute("style", "display: block");
+    } else if (event.target !==question4El.children[2]) {
       alert("wrong")
-      question4El.classList.add(".hide");
-      resultsEl.classList.remove(".hide");
+      question4El.setAttribute("style", "display: none");
+      resultsEl.setAttribute("style", "display: block");
     }
   
-    if (timeEl.textContent = 0 || question4El.classList.contains(".hide")) {
+    if (time === 0 || resultsEl.setAttribute("style", "display: block")) {
       resultsEl.textContent = "You got " + results;
     }
-    if (answerquestion1 === "boolean" && answerquestion2 === "0r" && answerquestion3 === "equal" && answerquestion4 === "++") {
-      resultsEl.textContent = "You got " + results[4] + "!";
-    } else if (answerquestion1 === "boolean" && answerquestion2 === "or" && answerquestion3 === "equal" && answerquestion4 !== "++" || answerquestion1 === "boolean" && answerquestion2 === "or" && answerquestion3 !== "equal" && answerquestion4 === "++" || answerquestion1 === "boolean" && answerquestion2 !== "or" && answerquestion3 === "equal" && answerquestion4 === "++" || answerquestion1 !== "boolean" && answerquestion2 === "or" && answerquestion3 === "equal" && answerquestion4 === "++") {
-      resultsEl.textContent = "You got " + results[3] + "!";
-    } else if (answerquestion1 === "boolean" && answerquestion2 === "or" && answerquestion3 !== "equal" && answerquestion4 !== "++" || answerquestion1 === "boolean" && answerquestion2 !== "or" && answerquestion3 === "equal" && answerquestion4 !== "++" || answerquestion1 === "boolean" && answerquestion2 !== "or" && answerquestion3 !== "equal" && answerquestion4 === "++" || answerquestion1 !== "boolean" && answerquestion2 === "or" && answerquestion3 === "equal" && answerquestion4 !== "++" || answerquestion1 !== "boolean" && answerquestion2 === "or" && answerquestion3 !== "equal" && answerquestion4 === "++" || answerquestion1 !== "boolean" && answerquestion2 !== "or" && answerquestion3 === "equal" && answerquestion4 === "++") {
-      resultsEl.textContent = "You got " + results[2] + "!";
-    } else if (answerquestion1 === "boolean" && answerquestion2 !== "or" && answerquestion3 !== "equal" && answerquestion4 !== "++" || answerquestion1 !== "boolean" && answerquestion2 === "or" && answerquestion3 !== "equal" && answerquestion4 !== "++" || answerquestion1 !== "boolean" && answerquestion2 !== "or" && answerquestion3 === "equal" && answerquestion4 !== "++" || answerquestion1 !== "boolean" && answerquestion2 !== "or" && answerquestion3 !== "equal" && answerquestion4 === "++") {
-      resultsEl.textContent = "You got " + results[1] + "!";
-    } else {
-      resultsEl.textContent = "You got " + results[0] + "!";
+    if question1El.alert("correct") && question2El.alert("correct") && question3El.alert("correct") && question4El.alert("correct") {
+      resultsEl.textContent = "You got " + results[4] + "%";
+    } else if question1El.alert("correct") && question2El.alert("correct") && question3El.alert("correct") && question4El.alert("wrong") || 
+    question1El.alert("correct") && question2El.alert("correct") && question3El.alert("wrong") && question4El.alert("correct") ||
+    question1El.alert("correct") && question2El.alert("wrong") && question3El.alert("correct") && question4El.alert("correct") ||
+    question1El.alert("wrong") && question2El.alert("correct") && question3El.alert("correct") && question4El.alert("correct") {
+      resultsEl.textContent = "You got " + results[3] + "%";
+    } else if question1El.alert("correct") && question2El.alert("correct") && question3El.alert("wrong") && question4El.alert("wrong") ||
+    question1El.alert("correct") && question2El.alert("wrong") && question3El.alert("correct") && question4El.alert("wrong") ||
+    question1El.alert("correct") && question2El.alert("wrong") && question3El.alert("wrong") && question4El.alert("correct") ||
+    question1El.alert("wrong") && question2El.alert("correct") && question3El.alert("correct") && question4El.alert("wrong") ||
+    question1El.alert("wrong") && question2El.alert("correct") && question3El.alert("wrong") && question4El.alert("correct") ||
+    question1El.alert("wrong") && question2El.alert("wrong") && question3El.alert("correct") && question4El.alert("correct") {
+      resultsEl.textContent = "You got " + results[2] + "%";
+    } else if question1El.alert("correct") && question2El.alert("wrong") && question3El.alert("wrong") && question4El.alert("wrong") ||
+    question1El.alert("wrong") && question2El.alert("correct") && question3El.alert("wrong") && question4El.alert("wrong") ||
+    question1El.alert("wrong") && question2El.alert("wrong") && question3El.alert("correct") && question4El.alert("wrong") ||
+    question1El.alert("wrong") && question2El.alert("wrong") && question3El.alert("wrong") && question4El.alert("correct") {
+      resultsEl.textContent = "You got " + results[1] + "%";
+    } else if question1El.alert("wrong") && question2El.alert("wrong") && question3El.alert("wrong") && question4El.alert("wrong") {
+      resultsEl.textContent = "You got " + results[0] + "%";
     }
   });
 
