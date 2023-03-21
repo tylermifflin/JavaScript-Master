@@ -8,6 +8,11 @@ var question3El = document.getElementById("question3");
 var question4El = document.getElementById("question4");
 var resultsEl = document.getElementById("results");
 
+var results = [0, 25, 50, 75, 100];
+  var answerquestion1 = "boolean";
+  var answerquestion2 = "or"; 
+  var answerquestion3 = "equal";
+  var answerquestion4 = "and";
 
 
 
@@ -23,32 +28,37 @@ startquizbuttonEl.addEventListener("click", function(event) {
  
 function startquizbutton() {
   var time = 60;
-  var results = [0, 25, 50, 75, 100];
-  var answerquestion1 = "boolean";
-  var answerquestion2 = "or"; 
-  var answerquestion3 = "equal";
-  var answerquestion4 = "and";
   var timerInterval = setInterval(function() {
     time--;
     timeEl.textContent = time;
-    if (time === 0) {
-      clearInterval(timerInterval);
-    }
-  
   }, 1000);
 }
 
     question1El.addEventListener("click", function(event) {
+      event.preventDefault();
+      question1();
 
     if (event.target.textContent === question1El.children[2]) {
-      question1El.classList.add(".hide");
-      question2El.classList.remove(".hide");
-    } else {timeEl.textContent = 45;
-      timeEl.textContent--;
-      question1El.classList.add(".hide");
-      question2El.classList.remove(".hide");
+      alert("correct")
+      question1El.setAttribute("style", "display: none");
+      question2El.setAttribute("style", "display: block");
+    } else {var time = 45;
+      time--;
+      timeEl.textContent = time;
+      question1El.setAttribute("style", "display: none");
+      question2El.setAttribute("style", "display: block");
     } 
   });
+
+  function question1() {
+    var time = 60;
+    var timerInterval = setInterval(function() {
+      time--;
+      timeEl.textContent = time;
+    }, 1000);
+  }
+
+
     question2El.addEventListener("click", function(event) {
     if (event.target.textContent === question2El.children[1]) {
       question2El.classList.add(".hide");
