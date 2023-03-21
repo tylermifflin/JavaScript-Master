@@ -44,7 +44,7 @@ function startquizbutton() {
       question1El.classList.add(".hide");
       question2El.classList.remove(".hide");
     } else {timeEl.textContent = 45;
-      time--;
+      timeEl.textContent--;
       question1El.classList.add(".hide");
       question2El.classList.remove(".hide");
     } 
@@ -54,7 +54,7 @@ function startquizbutton() {
       question2El.classList.add(".hide");
       question3El.classList.remove(".hide");
     }  else {timeEl.textContent = 30;
-      time--;
+      timeEl.textContent--;
       question2El.classList.add(".hide");
       question3El.classList.remove(".hide");
     }
@@ -64,7 +64,7 @@ function startquizbutton() {
       question3El.classList.add(".hide");
       question4El.classList.remove(".hide");
     } else {timeEl.textContent = 15;
-      time--;
+      timeEl.textContent--;
       question3El.classList.add(".hide");
       question4El.classList.remove(".hide");
     }
@@ -74,7 +74,7 @@ function startquizbutton() {
       question4El.classList.add(".hide");
       resultsEl.classList.remove(".hide");
     } else {timeEl.textContent = 0;
-      time--;
+      timeEl.textContent--;
     }
   
     if (timeEl.textContent = 0 || question4El.classList.contains(".hide")) {
