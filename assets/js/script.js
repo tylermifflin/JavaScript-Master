@@ -53,12 +53,11 @@ function startquizbutton() {
     event.preventDefault();
     if (event.target === question2El.children[1]) {
       alert("correct")
-      question2El.classList.add(".hide");
-      question3El.classList.remove(".hide");
-    }  else {timeEl.textContent = 30;
-      timeEl.textContent--;
-      question2El.classList.add(".hide");
-      question3El.classList.remove(".hide");
+      question2El.setAttribute("style", "display: none");
+      question3El.setAttribute("style", "display: block");
+    }  else if (event.target !==question2El.children[1]) {
+      question2El.setAttribute("style", "display: none");
+      question3El.setAttribute("style", "display: block");
     }
   });
     question3El.addEventListener("click", function(event) {
