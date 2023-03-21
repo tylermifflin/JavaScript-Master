@@ -61,13 +61,12 @@ function startquizbutton() {
     }
   });
     question3El.addEventListener("click", function(event) {
-    if (event.target.textContent === question3El.children[4]) {
-      question3El.classList.add(".hide");
-      question4El.classList.remove(".hide");
-    } else {timeEl.textContent = 15;
-      timeEl.textContent--;
-      question3El.classList.add(".hide");
-      question4El.classList.remove(".hide");
+    if (event.target === question3El.children[4]) {
+      question3El.setAttribute("style", "display: none");
+      question4El.setAttribute("style", "display: block");
+    } else if (event.target !==question3El.children[4]) {
+      question3El.setAttribute("style", "display: none");
+      question4El.setAttribute("style", "display: block");
     }
   });
     question4El.addEventListener("click", function(event) {
