@@ -9,13 +9,14 @@ var question4El = document.getElementById("question4");
 var resultsEl = document.getElementById("results");
 
 var results = [0, 25, 50, 75, 100];
-  var answerquestion1 = "boolean";
-  var answerquestion2 = "or"; 
-  var answerquestion3 = "equal";
-  var answerquestion4 = "and";
+var answerquestion1;
+var answerquestion2;
+var answerquestion3;
+var answerquestion4; 
 
 
 
+ 
 startquizbuttonEl.addEventListener("click", function(event) {
   event.preventDefault();
   startquizbutton();
@@ -41,12 +42,17 @@ function startquizbutton() {
 
     if (event.target === question1El.children[2]) {
       alert("correct")
+      answerquestion1 === true;
       question1El.setAttribute("style", "display: none");
       question2El.setAttribute("style", "display: block");
+  
+
     } else if (event.target !==question1El.children[2]) {
       alert("wrong")
+      answerquestion1 !== true;
       question1El.setAttribute("style", "display: none");
       question2El.setAttribute("style", "display: block");
+      
 
     }
   });
@@ -55,32 +61,42 @@ function startquizbutton() {
     event.preventDefault();
     if (event.target === question2El.children[1]) {
       alert("correct")
+      answerquestion2 === true;
       question2El.setAttribute("style", "display: none");
       question3El.setAttribute("style", "display: block");
+      
     }  else if (event.target !==question2El.children[1]) {
       alert("wrong")
+      answerquestion2 !== true;
       question2El.setAttribute("style", "display: none");
       question3El.setAttribute("style", "display: block");
+      
     }
   });
     question3El.addEventListener("click", function(event) {
     if (event.target === question3El.children[4]) {
       alert("correct")
+      answerquestion3 === true;
       question3El.setAttribute("style", "display: none");
       question4El.setAttribute("style", "display: block");
+      
     } else if (event.target !==question3El.children[4]) {
       alert("wrong")
+      answerquestion3 !== true;
       question3El.setAttribute("style", "display: none");
       question4El.setAttribute("style", "display: block");
+      
     }
   });
     question4El.addEventListener("click", function(event) {
     if (event.target === question4El.children[2]) {
       alert("correct")
+      answerquestion4 === true;
       question4El.setAttribute("style", "display: none");
       resultsEl.setAttribute("style", "display: block");
     } else if (event.target !==question4El.children[2]) {
       alert("wrong")
+      answerquestion4 !== true;
       question4El.setAttribute("style", "display: none");
       resultsEl.setAttribute("style", "display: block");
     }
@@ -88,27 +104,33 @@ function startquizbutton() {
     if (time === 0 || resultsEl.setAttribute("style", "display: block")) {
       resultsEl.textContent = "You got " + results;
     }
-    if question1El.alert("correct") && question2El.alert("correct") && question3El.alert("correct") && question4El.alert("correct") {
-      resultsEl.textContent = "You got " + results[4] + "%";
-    } else if question1El.alert("correct") && question2El.alert("correct") && question3El.alert("correct") && question4El.alert("wrong") || 
-    question1El.alert("correct") && question2El.alert("correct") && question3El.alert("wrong") && question4El.alert("correct") ||
-    question1El.alert("correct") && question2El.alert("wrong") && question3El.alert("correct") && question4El.alert("correct") ||
-    question1El.alert("wrong") && question2El.alert("correct") && question3El.alert("correct") && question4El.alert("correct") {
-      resultsEl.textContent = "You got " + results[3] + "%";
-    } else if question1El.alert("correct") && question2El.alert("correct") && question3El.alert("wrong") && question4El.alert("wrong") ||
-    question1El.alert("correct") && question2El.alert("wrong") && question3El.alert("correct") && question4El.alert("wrong") ||
-    question1El.alert("correct") && question2El.alert("wrong") && question3El.alert("wrong") && question4El.alert("correct") ||
-    question1El.alert("wrong") && question2El.alert("correct") && question3El.alert("correct") && question4El.alert("wrong") ||
-    question1El.alert("wrong") && question2El.alert("correct") && question3El.alert("wrong") && question4El.alert("correct") ||
-    question1El.alert("wrong") && question2El.alert("wrong") && question3El.alert("correct") && question4El.alert("correct") {
-      resultsEl.textContent = "You got " + results[2] + "%";
-    } else if question1El.alert("correct") && question2El.alert("wrong") && question3El.alert("wrong") && question4El.alert("wrong") ||
-    question1El.alert("wrong") && question2El.alert("correct") && question3El.alert("wrong") && question4El.alert("wrong") ||
-    question1El.alert("wrong") && question2El.alert("wrong") && question3El.alert("correct") && question4El.alert("wrong") ||
-    question1El.alert("wrong") && question2El.alert("wrong") && question3El.alert("wrong") && question4El.alert("correct") {
-      resultsEl.textContent = "You got " + results[1] + "%";
-    } else if question1El.alert("wrong") && question2El.alert("wrong") && question3El.alert("wrong") && question4El.alert("wrong") {
-      resultsEl.textContent = "You got " + results[0] + "%";
+    if (answerquestion1 === true && answerquestion2 === true && answerquestion3 === true && answerquestion4 === true) {
+      resultsEl.textContent = "You got " + results[4] + "!";
+    } else if (answerquestion1 === true && answerquestion2 === true && answerquestion3 === true && answerquestion4 !== true 
+      || answerquestion1 === true && answerquestion2 === true && answerquestion3 !== true && answerquestion4 === true
+      || answerquestion1 === true && answerquestion2 !== true && answerquestion3 === true && answerquestion4 === true 
+      || answerquestion1 !== true && answerquestion2 === true && answerquestion3 === true && answerquestion4 === true) {
+      resultsEl.textContent = "You got " + results[3] + "!";
+    } else if (answerquestion1 === true && answerquestion2 === true && answerquestion3 !== true && answerquestion4 !== true || 
+      answerquestion1 === true && answerquestion2 !== true && answerquestion3 === true && answerquestion4 !== true || 
+      answerquestion1 === true && answerquestion2 !== true && answerquestion3 !== true && answerquestion4 === true || 
+      answerquestion1 !== true && answerquestion2 === true && answerquestion3 === true && answerquestion4 !== true || 
+      answerquestion1 !== true && answerquestion2 === true && answerquestion3 !== true && answerquestion4 === true || 
+      answerquestion1 !== true && answerquestion2 !== true && answerquestion3 === true && answerquestion4 === true) {
+      resultsEl.textContent = "You got " + results[2] + "!";
     }
+    else if (answerquestion1 === true && answerquestion2 !== true && answerquestion3 !== true && answerquestion4 !== true ||
+      answerquestion1 !== true && answerquestion2 === true && answerquestion3 !== true && answerquestion4 !== true ||
+      answerquestion1 !== true && answerquestion2 !== true && answerquestion3 === true && answerquestion4 !== true ||
+      answerquestion1 !== true && answerquestion2 !== true && answerquestion3 !== true && answerquestion4 === true) {
+      resultsEl.textContent = "You got " + results[1] + "!";
+    }
+    else if (answerquestion1 !== true && answerquestion2 !== true && answerquestion3 !== true && answerquestion4 !== true) {
+      resultsEl.textContent = "You got " + results[0] + "!";
+    }
+
+    //set local storage for highscoresEl
+    localStorage.setItem("highscore", JSON.stringify(highscores));
+
   });
 
