@@ -36,31 +36,23 @@ function startquizbutton() {
 
     question1El.addEventListener("click", function(event) {
       event.preventDefault();
-      question1();
 
-    if (event.target.textContent === question1El.children[2]) {
+    if (event.target === question1El.children[2]) {
       alert("correct")
       question1El.setAttribute("style", "display: none");
       question2El.setAttribute("style", "display: block");
-    } else {var time = 45;
-      time--;
-      timeEl.textContent = time;
+    } else if (event.target !==question1El.children[2]) {
+      alert("wrong")
       question1El.setAttribute("style", "display: none");
       question2El.setAttribute("style", "display: block");
-    } 
+
+    }
   });
-
-  function question1() {
-    var time = 60;
-    var timerInterval = setInterval(function() {
-      time--;
-      timeEl.textContent = time;
-    }, 1000);
-  }
-
-
-    question2El.addEventListener("click", function(event) {
-    if (event.target.textContent === question2El.children[1]) {
+  
+   question2El.addEventListener("click", function(event) {
+    event.preventDefault();
+    if (event.target === question2El.children[1]) {
+      alert("correct")
       question2El.classList.add(".hide");
       question3El.classList.remove(".hide");
     }  else {timeEl.textContent = 30;
