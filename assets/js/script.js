@@ -8,12 +8,12 @@ var question3El = document.getElementById("question3");
 var question4El = document.getElementById("question4");
 var resultsEl = document.getElementById("results");
 
-var results = [0, 25, 50, 75, 100];
-var answerquestion1;
-var answerquestion2;
-var answerquestion3;
-var answerquestion4; 
-
+var score = 0;
+var scoreoptions = [0, 25, 50, 75, 100];
+var answerquestion1 = question1El.children[2];
+var answerquestion2 = question2El.children[1];
+var answerquestion3 = question3El.children[4];
+var answerquestion4 = question4El.children[2];
 
 
  
@@ -42,16 +42,18 @@ function startquizbutton() {
 
     if (event.target === question1El.children[2]) {
       alert("correct")
-      answerquestion1 === true;
       question1El.setAttribute("style", "display: none");
       question2El.setAttribute("style", "display: block");
+      score = score + scoreoptions[1];
+      displayScore();
   
 
     } else if (event.target !==question1El.children[2]) {
       alert("wrong")
-      answerquestion1 !== true;
       question1El.setAttribute("style", "display: none");
       question2El.setAttribute("style", "display: block");
+      score = score + scoreoptions[0];
+      displayScore();
       
 
     }
@@ -61,76 +63,62 @@ function startquizbutton() {
     event.preventDefault();
     if (event.target === question2El.children[1]) {
       alert("correct")
-      answerquestion2 === true;
       question2El.setAttribute("style", "display: none");
       question3El.setAttribute("style", "display: block");
+      score = score + scoreoptions[1];
+      displayScore();
       
     }  else if (event.target !==question2El.children[1]) {
       alert("wrong")
-      answerquestion2 !== true;
       question2El.setAttribute("style", "display: none");
       question3El.setAttribute("style", "display: block");
+      score = score + scoreoptions[0];
+      displayScore();
+
       
     }
   });
     question3El.addEventListener("click", function(event) {
     if (event.target === question3El.children[4]) {
       alert("correct")
-      answerquestion3 === true;
       question3El.setAttribute("style", "display: none");
       question4El.setAttribute("style", "display: block");
+      score = score + scoreoptions[1];
+      displayScore();
       
     } else if (event.target !==question3El.children[4]) {
       alert("wrong")
-      answerquestion3 !== true;
       question3El.setAttribute("style", "display: none");
       question4El.setAttribute("style", "display: block");
+      score = score + scoreoptions[0];
+      displayScore();
       
     }
   });
     question4El.addEventListener("click", function(event) {
     if (event.target === question4El.children[2]) {
       alert("correct")
-      answerquestion4 === true;
       question4El.setAttribute("style", "display: none");
       resultsEl.setAttribute("style", "display: block");
+      score = score + scoreoptions[1];
+      displayScore();
+
     } else if (event.target !==question4El.children[2]) {
       alert("wrong")
-      answerquestion4 !== true;
       question4El.setAttribute("style", "display: none");
       resultsEl.setAttribute("style", "display: block");
+      score = score + scoreoptions[0];
+      displayScore();
     }
-  
+    
+    
     if (time === 0 || resultsEl.setAttribute("style", "display: block")) {
-      resultsEl.textContent = "You got " + results;
+      resultsEl.textContent = "Your score is " + results;
     }
-    if (answerquestion1 === true && answerquestion2 === true && answerquestion3 === true && answerquestion4 === true) {
-      resultsEl.textContent = "You got " + results[4] + "!";
-    } else if (answerquestion1 === true && answerquestion2 === true && answerquestion3 === true && answerquestion4 !== true 
-      || answerquestion1 === true && answerquestion2 === true && answerquestion3 !== true && answerquestion4 === true
-      || answerquestion1 === true && answerquestion2 !== true && answerquestion3 === true && answerquestion4 === true 
-      || answerquestion1 !== true && answerquestion2 === true && answerquestion3 === true && answerquestion4 === true) {
-      resultsEl.textContent = "You got " + results[3] + "!";
-    } else if (answerquestion1 === true && answerquestion2 === true && answerquestion3 !== true && answerquestion4 !== true || 
-      answerquestion1 === true && answerquestion2 !== true && answerquestion3 === true && answerquestion4 !== true || 
-      answerquestion1 === true && answerquestion2 !== true && answerquestion3 !== true && answerquestion4 === true || 
-      answerquestion1 !== true && answerquestion2 === true && answerquestion3 === true && answerquestion4 !== true || 
-      answerquestion1 !== true && answerquestion2 === true && answerquestion3 !== true && answerquestion4 === true || 
-      answerquestion1 !== true && answerquestion2 !== true && answerquestion3 === true && answerquestion4 === true) {
-      resultsEl.textContent = "You got " + results[2] + "!";
-    }
-    else if (answerquestion1 === true && answerquestion2 !== true && answerquestion3 !== true && answerquestion4 !== true ||
-      answerquestion1 !== true && answerquestion2 === true && answerquestion3 !== true && answerquestion4 !== true ||
-      answerquestion1 !== true && answerquestion2 !== true && answerquestion3 === true && answerquestion4 !== true ||
-      answerquestion1 !== true && answerquestion2 !== true && answerquestion3 !== true && answerquestion4 === true) {
-      resultsEl.textContent = "You got " + results[1] + "!";
-    }
-    else if (answerquestion1 !== true && answerquestion2 !== true && answerquestion3 !== true && answerquestion4 !== true) {
-      resultsEl.textContent = "You got " + results[0] + "!";
-    }
-
-    //set local storage for highscoresEl
-    localStorage.setItem("highscore", JSON.stringify(highscores));
-
+    
   });
+  
+
+
+
 
