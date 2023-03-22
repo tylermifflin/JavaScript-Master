@@ -111,9 +111,10 @@ function startquizbutton() {
       displayScore();
     }
     
-    
+    function displayScore() {
     if (time === 0 || resultsEl.setAttribute("style", "display: block")) {
-      resultsEl.textContent = "Your score is " + results;
+      resultsEl.textContent = "Your score is " + score + " out of 100";
+
     }
     
   });
