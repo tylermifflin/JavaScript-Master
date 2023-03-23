@@ -32,7 +32,7 @@ startquizbuttonEl.addEventListener("click", function(event) {
 });
 
 function startquizbutton() {
-  var time = 15;
+  var time = 20;
   var timerInterval = setInterval(function() {
     time--;
     timeEl.textContent = time;

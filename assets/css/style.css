@@ -1,24 +1,48 @@
+#js-master {
+    color: blue;
+    font-size: 50px;
+}
+#time {
+    color: red;
+}
+#highscore {
+    color: rgb(225, 19, 208);
+}
+#start-quiz-button {
+    color: green;
+    padding: 30px;
+    font-size: 30px;
+}
+
 #question1 {
+    color: aquamarine;
     display: none
 }
 #question2 {
+    color: green;
     display: none
 }
 #question3 {
+    color: blue;
     display: none
 }
 #question4 {
+    color: red;
     display: none
 }
 #results {
+    color: purple;
     display: none
 }
 #savehighscore {
+    color: purple;
     display: none
 }
 #initials {
+    color: blue;
     display: none
 }
 #enterinitials {
+    color: red;
     display: none
 }
