@@ -1,12 +1,21 @@
+* { 
+
+    margin: 30x;
+    padding: 10px;
+}
+
 #js-master {
     color: blue;
     font-size: 50px;
 }
 #time {
     color: red;
+    font-size: 40px;
+
 }
 #highscore {
     color: rgb(225, 19, 208);
+    font-size: 30px;
 }
 #start-quiz-button {
     color: green;
