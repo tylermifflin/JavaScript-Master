@@ -13,5 +13,5 @@ Noteworthy Features:
 
 -I created a timer interval that starts at 20 and counts down each second, I used my event listeners to subtract 5 seconds off the time if the incorrect answer was chosen.
 
-Here is a screenshot of my page : 
+Here is a link to my deployed application and a screenshot of my page : https://tylermifflin.github.io/JavaScript-Master/
 ![Screenshot 2023-03-22 at 9 01 01 PM](https://user-images.githubusercontent.com/123903709/227093435-93b97a8c-2174-4e1f-a7f3-6ed6c5885c8e.png)
