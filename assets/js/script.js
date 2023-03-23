@@ -31,12 +31,14 @@ startquizbuttonEl.addEventListener("click", function(event) {
 });
  
 function startquizbutton() {
-  var time = 60;
+  var time = 30;
   var timerInterval = setInterval(function() {
     time--;
     timeEl.textContent = time;
-    if (resultsEl.setAttribute("style", "display: block")) {
-      clearInterval(timerInterval); }
+    if (time === 0) {
+      clearInterval(timerInterval);
+     } else if displayScore() {
+      clearInterval(timerInterval);}
   }, 1000);
 }
 function displayScore() {
@@ -60,6 +62,9 @@ function displayScore() {
       question1El.setAttribute("style", "display: none");
       question2El.setAttribute("style", "display: block");
       score += scoreoptions[0];
+      if (event.target !==question1El.children[2]) {
+        time-=5;
+      }
       
       
 
@@ -80,6 +85,9 @@ function displayScore() {
       question2El.setAttribute("style", "display: none");
       question3El.setAttribute("style", "display: block");
       score += scoreoptions[0];
+      if (event.target !==question2El.children[1]) {
+        time-=5;
+      }
       
 
       
@@ -98,6 +106,9 @@ function displayScore() {
       question3El.setAttribute("style", "display: none");
       question4El.setAttribute("style", "display: block");
       score += scoreoptions[0];
+      if (event.target !==question3El.children[4]) {
+        time-=5;
+      }
       
       
     }
