@@ -27,24 +27,43 @@ startquizbuttonEl.addEventListener("click", function(event) {
   if (event.target === startquizbuttonEl){
     alert("test your knowledge of javascript");
    question1El.setAttribute("style", "display: block");
+   startquizbuttonEl.setAttribute("style", "display: none");
 }
 });
- 
+
 function startquizbutton() {
-  var time = 30;
+  var time = 15;
   var timerInterval = setInterval(function() {
     time--;
     timeEl.textContent = time;
     if (time === 0) {
       clearInterval(timerInterval);
-     } else if displayScore() {
+     } 
+     if (resultsEl.setAttribute("style", "display: block")) {
       clearInterval(timerInterval);}
   }, 1000);
 }
+
 function displayScore() {
-    resultsEl.setAttribute("style", "display: block")
-    resultsEl.textContent = + score + " out of 100";
+  resultsEl.setAttribute("style", "display: block")
+  resultsEl.textContent = + score + " out of 100";
+  enterinitialsEl.setAttribute("style", "display: block");
+  initialsEl.setAttribute("style", "display: block");
+  savehighscoreEl.setAttribute("style", "display: block");
 }
+
+  savehighscoreEl.addEventListener("click", function(event) {
+    event.preventDefault();
+  var initials = initialsEl.value;
+  if (initials) {
+  var highscore = {
+    initials: initials,
+    score: score
+  }
+  localStorage.setItem("highscore", JSON.stringify(highscore));
+  highscoreEl.textContent = initials + " " + score;
+  }
+  });
 
     question1El.addEventListener("click", function(event) {
       event.preventDefault();
@@ -128,6 +147,6 @@ function displayScore() {
       score += scoreoptions[0];
       displayScore();
     }
-    
-    
-  });
+  }
+  );
+
