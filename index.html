@@ -4,53 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JavaScript Master</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>JavaScript Master</title> <!--added my unique title-->
+    <link rel="stylesheet" href="./assets/css/style.css"> <!--linked my css-->
   </head>
   <body>
     <header>
-        <h1 id="js-master">JavaScript Master</h1>
+        <h1 id="js-master">JavaScript Master</h1> <!--used my title and an id to use in my JavaScript-->
         <nav>
             <ul>
-                <li id="time">Time Remaining: </li>
+                <li id="time">Time Remaining: </li> <!--used ids for time and highscore to connect to my JS-->
                 <li id="highscore">High Scores</li>
             </ul>
         </nav>
     </header>
-    <div class="Test-Your-Knowledge-Now">
+    <div> <!--added a div to hold my start button, used an id to make an event listener and use in JS-->
         <button id="start-quiz-button">Test Your Knowledge Now</button>
     </div>
     
-        <div id="question1">
+        <div id="question1"> <!--added ids to each question to use in my JS and to make an event listener for each-->
             <h2>What type of value is being stored in JavaScript for var includelowercase = "false"?</h2>
             <input type="radio" name="question1" value="string">String
             <input type="radio" name="question1" value="boolean">Boolean
             <input type="radio" name="question1" value="number">Number
             <input type="radio" name="question1" value="array">Array
         </div>
-        <div id="question2">
+        <div id="question2"> <!--added ids to each question to use in my JS and to make an event listener for each-->
             <h2>What is the meaning of this symbol in JavaScript: || </h2>
             <input type="radio" name="question2" value="or">Or
             <input type="radio" name="question2" value="and">And
             <input type="radio" name="question2" value="not">Not
             <input type="radio" name="question2" value="equal">Equal
         </div>
-        <div id="question3">
+        <div id="question3"> <!--added ids to each question to use in my JS and to make an event listener for each-->
             <h2>What is the meaning of this symbol in JavaScript: === </h2>
             <input type="radio" name="question3" value="or">Or
             <input type="radio" name="question3" value="and">And
             <input type="radio" name="question3" value="not">Not
             <input type="radio" name="question3" value="equal">Equal
         </div>
-        <div id="question4">
+        <div id="question4"> <!--added ids to each question to use in my JS and to make an event listener for each-->
             <h2>What is the meaning of this symbol in JavaScript: ++ </h2>
             <input type="radio" name="question4" value="or">Or
             <input type="radio" name="question4" value="and">And
             <input type="radio" name="question4" value="not">Not
             <input type="radio" name="question4" value="equal">Equal
         </div>
-        <div id="results"> </div>
-        <div>
+        <div id="results"> </div> <!--added a div to hold my results to hide them initially until called in JS-->
+        <div> <!--added a div to hold my save high score button, used an id to make an event listener and use in JS, keep hidden until called at the end-->
             <label for ="initials" id="enterinitials">Enter Initials:</label>
             <input type="text" id="initials" name="initials">
             <button id="savehighscore">Save High Score</button>

@@ -1,8 +1,11 @@
+/* added some margin and padding to the body */
+
 * { 
 
     margin: 30x;
     padding: 10px;
 }
+/* added the colors and font sizes i wanted in my CSS */
 
 #js-master {
     color: blue;
@@ -22,27 +25,32 @@
     padding: 30px;
     font-size: 30px;
 }
-
+/* used display none to hide question 1 until the start button is clicked */
 #question1 {
     color: aquamarine;
     display: none
 }
+/* used display none to hide question 2 until question 1 is answered */
 #question2 {
     color: green;
     display: none
 }
+/* used display none to hide question 3 until question 2 is answered */
 #question3 {
     color: blue;
     display: none
 }
+/* used display none to hide question 4 until question 3 is answered */
 #question4 {
     color: red;
     display: none
 }
+/* used display none to hide results until question 4 is answered */
 #results {
     color: purple;
     display: none
 }
+/* used display none to hide the save high score button until the results are shown */
 #savehighscore {
     color: purple;
     display: none
