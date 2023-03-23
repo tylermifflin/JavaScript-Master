@@ -6,8 +6,12 @@
 
 #Noteworthy Features: 
 -I created 6 event listeners in this project and figured out how to make them all function. The first one starts the quiz and then hides the start button, starts the timer and displays question 1. I made 4 event listeners for each question to display the proper question and check if the proper answer was clicked. I used an event listener to save your score and initials to local storage.
+
 -I created multiple ids in my HTML in order to use them in my JavaScript using the variables I created with the get Element by Id method. This was very useful in making my ids either be hidden or visible when I wanted them to be. 
+
 -I created an array for possible scores and used if statements with my event listeners and event targets for each question to make the proper score display at the end depending on how many answers were correct or incorrect. 
+
 -I created a timer interval that starts at 20 and counts down each second, I used my event listeners to subtract 5 seconds off the time if the incorrect answer was chosen.
+
 Here is a screenshot of my page : 
 ![Screenshot 2023-03-22 at 9 01 01 PM](https://user-images.githubusercontent.com/123903709/227093435-93b97a8c-2174-4e1f-a7f3-6ed6c5885c8e.png)
